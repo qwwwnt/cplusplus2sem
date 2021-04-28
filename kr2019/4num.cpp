@@ -26,57 +26,31 @@ public:
 class Car : public Vehicle {
 public:
     // Может ли ездить по суще
-    virtual bool canDrive() const {
+    virtual bool canDrive() const override {
         return true;
     }
 
-    // Может ли плавать
-    virtual bool canSail() const {
-        return false;
-    }
-
-    // Может ли летать
-    virtual bool canFly() const {
-        return false;
-    }
 
     virtual ~Car() {};
 };
 
 class Ship : public Vehicle {
 public:
-    // Может ли ездить по суще
-    virtual bool canDrive() const {
-        return false;
-    }
+    
 
     // Может ли плавать
-    virtual bool canSail() const {
+    virtual bool canSail() const override {
         return true;
     }
 
-    // Может ли летать
-    virtual bool canFly() const {
-        return false;
-    }
 
     virtual ~Ship() {};
 };
 
 class Plane : public Vehicle {
 public:
-    // Может ли ездить по суще
-    virtual bool canDrive() const {
-        return false;
-    }
-
-    // Может ли плавать
-    virtual bool canSail() const {
-        return false;
-    }
-
     // Может ли летать
-    virtual bool canFly() const {
+    virtual bool canFly() const override {
         return true;
     }
 
@@ -86,18 +60,8 @@ public:
 class Truck : public Car {
 public:
     // Может ли ездить по суще
-    virtual bool canDrive() const {
+    virtual bool canDrive() const override {
         return true;
-    }
-
-    // Может ли плавать
-    virtual bool canSail() const {
-        return false;
-    }
-
-    // Может ли летать
-    virtual bool canFly() const {
-        return false;
     }
 
     virtual ~Truck() {};
