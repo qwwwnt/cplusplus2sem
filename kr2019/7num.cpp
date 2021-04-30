@@ -16,8 +16,8 @@ int main() {
         v.push_back(s);
     }
 
-    std::sort(v.begin(), v.end(), [](const string &a, const string &b) { return a.length() < b.length(); });
-    std::reverse(v.begin(), v.end());
+    std::sort(v.begin(), v.end(), [](const string &a, const string &b) { return a.length() > b.length(); });
+   
     auto end = std::unique(v.begin(), v.end());
 
     for (auto i = v.begin(); i != end; ++i) {
